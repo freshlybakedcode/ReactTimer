@@ -7,9 +7,11 @@ var $ = require('jQuery');
 var CountdownForm = require('CountdownForm');
 
 describe('CountdownForm', () => {
+
   it('Should exist', () => {
     expect(CountdownForm).toExist();
   });
+
   it('should call "onSetCountdown" if valid seconds entered', () => {
     var spy = expect.createSpy();
     var countdownForm = TestUtils.renderIntoDocument(<CountdownForm onSetCountdown={spy} />);
@@ -31,4 +33,5 @@ describe('CountdownForm', () => {
 
     expect(spy).toNotHaveBeenCalled();
   });
+
 });
